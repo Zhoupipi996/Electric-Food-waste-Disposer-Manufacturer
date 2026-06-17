@@ -50,26 +50,29 @@
         </div>
       </div>
 
-      <!-- Right: Inquiry Form (Netlify ready, fixed name attribute) -->
+      <!-- Right: Inquiry Form (RG Forms integrated, no Netlify) -->
       <div style="background:var(--bg); padding:32px; border-radius:var(--r);">
         <h3 style="font-family:var(--font-d);font-size:22px;color:var(--navy); margin-bottom:16px;">Send Inquiry</h3>
-        <form action="/" method="post" name="contact" netlify id="inquiry-form">
-          <input type="hidden" name="form-name" value="contact">
+        <form action="https://script.google.com/macros/s/AKfycbzzmh1_pEvB-onGyBug8po-37Ge1pPwVWgcDJktOw-EXmGTnzgReCXZ4XYKejN1cEnc4g/exec" method="post" id="inquiry-form">
           <div style="margin-bottom:16px;">
             <label style="display:block; font-weight:600; margin-bottom:6px;">Your Name *</label>
-            <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+            <input type="text" name="Name" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
           </div>
           <div style="margin-bottom:16px;">
             <label style="display:block; font-weight:600; margin-bottom:6px;">Company Name</label>
-            <input type="text" name="company" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+            <input type="text" name="Company" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
           </div>
           <div style="margin-bottom:16px;">
             <label style="display:block; font-weight:600; margin-bottom:6px;">Email *</label>
-            <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+            <input type="email" name="Email" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-weight:600; margin-bottom:6px;">Phone *</label>
+            <input type="text" name="Phone" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
           </div>
           <div style="margin-bottom:16px;">
             <label style="display:block; font-weight:600; margin-bottom:6px;">Project Type</label>
-            <select name="project_type" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+            <select name="Project Type" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
               <option>OEM (own brand)</option>
               <option>ODM (custom design)</option>
               <option>Sample testing</option>
@@ -78,7 +81,7 @@
           </div>
           <div style="margin-bottom:16px;">
             <label style="display:block; font-weight:600; margin-bottom:6px;">Product Series</label>
-            <select name="product_series" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+            <select name="Product Series" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
               <option>2L Series</option>
               <option>2.8L Series</option>
               <option>3L Series</option>
@@ -89,7 +92,7 @@
           </div>
           <div style="margin-bottom:16px;">
             <label style="display:block; font-weight:600; margin-bottom:6px;">Message *</label>
-            <textarea name="message" rows="4" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;"></textarea>
+            <textarea name="Message" rows="4" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;">Submit Inquiry</button>
         </form>
