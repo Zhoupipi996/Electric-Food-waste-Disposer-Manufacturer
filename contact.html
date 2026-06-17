@@ -50,53 +50,62 @@
         </div>
       </div>
 
-      <!-- Right: Inquiry Form (RG Forms with JSON fetch) -->
+      <!-- Right: Inquiry Form -->
       <div style="background:var(--bg); padding:32px; border-radius:var(--r);">
-        <h3 style="font-family:var(--font-d);font-size:22px;color:var(--navy); margin-bottom:16px;">Send Inquiry</h3>
-        <form id="inquiry-form">
-          <div style="margin-bottom:16px;">
-            <label style="display:block; font-weight:600; margin-bottom:6px;">Your Name *</label>
-            <input type="text" name="Name" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
-          </div>
-          <div style="margin-bottom:16px;">
-            <label style="display:block; font-weight:600; margin-bottom:6px;">Company Name</label>
-            <input type="text" name="Company" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
-          </div>
-          <div style="margin-bottom:16px;">
-            <label style="display:block; font-weight:600; margin-bottom:6px;">Email *</label>
-            <input type="email" name="Email" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
-          </div>
-          <div style="margin-bottom:16px;">
-            <label style="display:block; font-weight:600; margin-bottom:6px;">Phone *</label>
-            <input type="text" name="Phone" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
-          </div>
-          <div style="margin-bottom:16px;">
-            <label style="display:block; font-weight:600; margin-bottom:6px;">Project Type</label>
-            <select name="Project Type" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
-              <option>OEM (own brand)</option>
-              <option>ODM (custom design)</option>
-              <option>Sample testing</option>
-              <option>Distribution inquiry</option>
-            </select>
-          </div>
-          <div style="margin-bottom:16px;">
-            <label style="display:block; font-weight:600; margin-bottom:6px;">Product Series</label>
-            <select name="Product Series" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
-              <option>2L Series</option>
-              <option>2.8L Series</option>
-              <option>3L Series</option>
-              <option>3.8L / 4.8L Series</option>
-              <option>4L Series</option>
-              <option>5.5L Flagship</option>
-            </select>
-          </div>
-          <div style="margin-bottom:16px;">
-            <label style="display:block; font-weight:600; margin-bottom:6px;">Message *</label>
-            <textarea name="Message" rows="4" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;">Submit Inquiry</button>
-        </form>
-        <p style="font-size:12px; color:var(--muted); margin-top:16px;">* We'll reply within 24 hours. For sample orders, please specify quantity and target market.</p>
+        <div id="form-container">
+          <h3 style="font-family:var(--font-d);font-size:22px;color:var(--navy); margin-bottom:16px;">Send Inquiry</h3>
+          <form id="inquiry-form">
+            <div style="margin-bottom:16px;">
+              <label style="display:block; font-weight:600; margin-bottom:6px;">Your Name *</label>
+              <input type="text" name="Name" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+            </div>
+            <div style="margin-bottom:16px;">
+              <label style="display:block; font-weight:600; margin-bottom:6px;">Company Name</label>
+              <input type="text" name="Company" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+            </div>
+            <div style="margin-bottom:16px;">
+              <label style="display:block; font-weight:600; margin-bottom:6px;">Email *</label>
+              <input type="email" name="Email" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+            </div>
+            <div style="margin-bottom:16px;">
+              <label style="display:block; font-weight:600; margin-bottom:6px;">Phone *</label>
+              <input type="text" name="Phone" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+            </div>
+            <div style="margin-bottom:16px;">
+              <label style="display:block; font-weight:600; margin-bottom:6px;">Project Type</label>
+              <select name="Project Type" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+                <option>OEM (own brand)</option>
+                <option>ODM (custom design)</option>
+                <option>Sample testing</option>
+                <option>Distribution inquiry</option>
+              </select>
+            </div>
+            <div style="margin-bottom:16px;">
+              <label style="display:block; font-weight:600; margin-bottom:6px;">Product Series</label>
+              <select name="Product Series" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+                <option>2L Series</option>
+                <option>2.8L Series</option>
+                <option>3L Series</option>
+                <option>3.8L / 4.8L Series</option>
+                <option>4L Series</option>
+                <option>5.5L Flagship</option>
+              </select>
+            </div>
+            <div style="margin-bottom:16px;">
+              <label style="display:block; font-weight:600; margin-bottom:6px;">Message *</label>
+              <textarea name="Message" rows="4" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Submit Inquiry</button>
+          </form>
+          <p style="font-size:12px; color:var(--muted); margin-top:16px;">* We'll reply within 24 hours. For sample orders, please specify quantity and target market.</p>
+        </div>
+        <!-- 成功消息（初始隐藏） -->
+        <div id="success-message" style="display:none; text-align:center; padding:30px 20px;">
+          <div style="font-size:48px; margin-bottom:16px;">✅</div>
+          <h3 style="font-family:var(--font-d);font-size:22px;color:var(--navy);margin-bottom:8px;">Thank You!</h3>
+          <p style="font-size:15px;color:var(--muted);margin-bottom:16px;">Your inquiry has been sent successfully. Our team will reply within 24 hours.</p>
+          <a href="/" class="btn btn-primary">Return to Home</a>
+        </div>
       </div>
     </div>
   </div>
@@ -108,7 +117,6 @@
 document.getElementById('inquiry-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // 收集表单数据并构造 JSON 对象
     const form = e.target;
     const data = {};
     const fields = form.querySelectorAll('input, select, textarea');
@@ -118,7 +126,6 @@ document.getElementById('inquiry-form').addEventListener('submit', function(e) {
         }
     });
 
-    // 发送 JSON 到 RG Forms
     const url = 'https://script.google.com/macros/s/AKfycbzzmh1_pEvB-onGyBug8po-37Ge1pPwVWgcDJktOw-EXmGTnzgReCXZ4XYKejN1cEnc4g/exec';
     fetch(url, {
         method: 'POST',
@@ -130,7 +137,9 @@ document.getElementById('inquiry-form').addEventListener('submit', function(e) {
     .then(response => response.json())
     .then(result => {
         if (result.result === 'success') {
-            window.location.href = '/thank-you.html';
+            // 隐藏表单，显示成功消息
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
         } else {
             alert('提交失败，请重试或直接邮件联系：' + result.error);
         }
