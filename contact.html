@@ -108,31 +108,35 @@
 document.getElementById('inquiry-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    var form = e.target;
-    var formData = new FormData(form);
-    var jsonData = {};
-
-    // 将表单数据转为 JSON 对象
-    for (var [key, value] of formData.entries()) {
-        jsonData[key] = value;
-    }
+    // 收集表单数据并构造 JSON 对象
+    const form = e.target;
+    const data = {};
+    const fields = form.querySelectorAll('input, select, textarea');
+    fields.forEach(field => {
+        if (field.name) {
+            data[field.name] = field.value;
+        }
+    });
 
     // 发送 JSON 到 RG Forms
-    fetch('https://script.google.com/macros/s/AKfycbzzmh1_pEvB-onGyBug8po-37Ge1pPwVWgcDJktOw-EXmGTnzgReCXZ4XYKejN1cEnc4g/exec', {
+    const url = 'https://script.google.com/macros/s/AKfycbzzmh1_pEvB-onGyBug8po-37Ge1pPwVWgcDJktOw-EXmGTnzgReCXZ4XYKejN1cEnc4g/exec';
+    fetch(url, {
         method: 'POST',
-        mode: 'no-cors',  // 因为 Google Apps Script 不支持 CORS，使用 no-cors 可以提交但无法读取响应
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(jsonData)
+        body: JSON.stringify(data)
     })
-    .then(function(response) {
-        // 因为 no-cors 模式无法读取响应内容，但提交会成功
-        // 只要不报错，我们就认为提交成功，跳转到 thank-you 页面
-        window.location.href = '/thank-you.html';
+    .then(response => response.json())
+    .then(result => {
+        if (result.result === 'success') {
+            window.location.href = '/thank-you.html';
+        } else {
+            alert('提交失败，请重试或直接邮件联系：' + result.error);
+        }
     })
-    .catch(function(error) {
-        alert('提交失败，请重试或直接联系我们。错误：' + error.message);
+    .catch(error => {
+        alert('网络错误，请重试或直接邮件联系。错误：' + error.message);
     });
 });
 </script>
