@@ -50,12 +50,11 @@
         </div>
       </div>
 
-      <!-- Right: Inquiry Form (pure HTML form) -->
+      <!-- Right: Inquiry Form -->
       <div style="background:var(--bg); padding:32px; border-radius:var(--r);">
         <div id="form-container">
           <h3 style="font-family:var(--font-d);font-size:22px;color:var(--navy); margin-bottom:16px;">Send Inquiry</h3>
-          <!-- 使用纯HTML表单，直接提交到RG Forms -->
-          <form action="https://script.google.com/macros/s/AKfycbzzmh1_pEvB-onGyBug8po-37Ge1pPwVWgcDJktOw-EXmGTnzgReCXZ4XYKejN1cEnc4g/exec" method="POST" target="_blank">
+          <form id="inquiry-form">
             <div style="margin-bottom:16px;">
               <label style="display:block; font-weight:600; margin-bottom:6px;">Your Name *</label>
               <input type="text" name="Name" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
@@ -98,8 +97,14 @@
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%;">Submit Inquiry</button>
           </form>
-          <p style="font-size:12px; color:var(--muted); margin-top:16px;">* We'll reply within 24 hours. For sample orders, please specify quantity and target market.</p>
-          <p style="font-size:12px; color:var(--muted); margin-top:8px;">⚠️ 提交后页面会跳转到Google页面，请耐心等待几秒。</p>
+          <p style="font-size:12px; color:var(--muted); margin-top:16px;">We'll reply within 24 hours. For sample orders, please specify quantity and target market.</p>
+        </div>
+        <!-- Success message (initially hidden) -->
+        <div id="success-message" style="display:none; text-align:center; padding:30px 20px;">
+          <div style="font-size:48px; margin-bottom:16px;">✅</div>
+          <h3 style="font-family:var(--font-d);font-size:22px;color:var(--navy);margin-bottom:8px;">Thank You!</h3>
+          <p style="font-size:15px;color:var(--muted);margin-bottom:16px;">Your inquiry has been sent successfully. Our team will reply within 24 hours.</p>
+          <a href="/" class="btn btn-primary">Return to Home</a>
         </div>
       </div>
     </div>
@@ -109,9 +114,39 @@
 <footer><div class="container"><div class="footer-grid"><div class="footer-col"><div class="logo" style="margin-bottom:16px;"><div class="logo-hex"><span>SH</span></div><div class="logo-text"><strong>SHIHAO</strong><small>Intelligent Technology</small></div></div><p>Guangdong Shihao Intelligent Technology Co., Ltd.<br>Huahui Rd #1, Ronggui, Shunde District<br>Foshan City, Guangdong, China</p><div class="social-row" style="margin-top:16px;"><a href="https://www.linkedin.com/company/bestar-tek/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://www.facebook.com/profile.php?id=61588629492017" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.tiktok.com/@jocelyn_smartdeviceoem" target="_blank" rel="noopener" class="social-link" aria-label="TikTok"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a></div></div><div class="footer-col"><h4>Products</h4><ul class="footer-links"><li><a href="products.html">2L Series</a></li><li><a href="products.html">3L Series</a></li><li><a href="products.html">3.8L / 4.8L Series</a></li><li><a href="products.html">4L Series</a></li><li><a href="products.html">5.5L Series</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="about.html#certifications">Certifications</a></li><li><a href="case-study.html">Case Studies</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-col"><h4>Partner</h4><ul class="footer-links"><li><a href="contact.html">OEM Inquiry</a></li><li><a href="contact.html">ODM Services</a></li><li><a href="contact.html">Request Sample</a></li></ul></div></div><div class="footer-bottom"><p data-i18n="footer_copy">© 2026 Guangdong Shihao Intelligent Technology Co., Ltd. All rights reserved.</p></div></div></footer>
 
 <script>
-// 纯HTML表单提交，JavaScript只用于处理提交后的行为（如显示提示），但不拦截提交
-// 页面会在提交后跳转到RG Forms的响应页面，所以用户会看到Google的返回结果
-// 如果提交成功，Google页面会显示"{}"或"成功"字样
+document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {};
+    const fields = form.querySelectorAll('input, select, textarea');
+    fields.forEach(field => {
+        if (field.name) {
+            data[field.name] = field.value;
+        }
+    });
+
+    const url = 'https://script.google.com/macros/s/AKfycbzzmh1_pEvB-onGyBug8po-37Ge1pPwVWgcDJktOw-EXmGTnzgReCXZ4XYKejN1cEnc4g/exec';
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.result === 'success') {
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        } else {
+            alert('Submission failed. Please try again or contact us directly by email.');
+        }
+    })
+    .catch(error => {
+        alert('Network error. Please try again or contact us directly by email.');
+    });
+});
 </script>
 </body>
 </html>
