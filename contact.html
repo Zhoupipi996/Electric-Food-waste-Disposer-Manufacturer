@@ -129,19 +129,16 @@ document.getElementById('inquiry-form').addEventListener('submit', function(e) {
     const url = 'https://script.google.com/macros/s/AKfycbzzmh1_pEvB-onGyBug8po-37Ge1pPwVWgcDJktOw-EXmGTnzgReCXZ4XYKejN1cEnc4g/exec';
     fetch(url, {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(result => {
-        if (result.result === 'success') {
-            document.getElementById('form-container').style.display = 'none';
-            document.getElementById('success-message').style.display = 'block';
-        } else {
-            alert('Submission failed. Please try again or contact us directly by email.');
-        }
+    .then(() => {
+        // 因为 no-cors 模式无法读取响应，只要不报错就认为成功
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('success-message').style.display = 'block';
     })
     .catch(error => {
         alert('Network error. Please try again or contact us directly by email.');
