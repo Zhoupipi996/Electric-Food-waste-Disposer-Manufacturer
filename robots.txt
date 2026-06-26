@@ -1,14 +1,4 @@
 User-agent: *
 Allow: /
 
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
 Sitemap: https://www.foodcycler-manufacturer.top/sitemap.xml
-# Verification Update: 2026-06-24 20:14:00
