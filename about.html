@@ -1,14 +1,13 @@
-<!--
-=============================================================
-SEO PATCH: about.html
-=============================================================
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<!-- 1. REPLACE <title> and <meta description> -->
+<!-- ===== SEO 优化部分（保留） ===== -->
 <title>About Shihao Intelligent – Electric Kitchen Composter Manufacturer Since 2020 | OEM/ODM Factory China</title>
 <meta name="description" content="Guangdong Shihao Intelligent Technology Co., Ltd. — vertically integrated electric kitchen composter manufacturer and electric food-waste composter factory in Foshan, China. 18,000+ sqm, 8,000 units/day, ISO 9001:2018, PSE/ETL/KC/CE certified. OEM/ODM since 2020.">
 
-<!-- 2. ADD JSON-LD before </head> -->
+<!-- JSON-LD 结构化数据（新增） -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,25 +31,79 @@ SEO PATCH: about.html
 }
 </script>
 
-<!-- 3. REPLACE page-hero h1 -->
-About Shihao: China's Dedicated<br>Electric Kitchen Composter Manufacturer
+<link rel="stylesheet" href="css/style.css"><link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+<div class="topbar"><span class="topbar-email">marketing@foodcycler-manufacturer.top</span><select class="lang-select" id="lang-select" aria-label="Language"><option value="en">🌐 English</option><option value="ja">🇯🇵 日本語</option><option value="es">🇪🇸 Español</option><option value="de">🇩🇪 Deutsch</option></select></div>
+<header id="site-header"><div class="header-inner"><a href="index.html" class="logo"><div class="logo-hex"><span>SH</span></div><div class="logo-text"><strong>SHIHAO</strong><small>Intelligent Technology</small></div></a><nav><a href="index.html" data-i18n="nav_home">Home</a><a href="about.html" class="active" data-i18n="nav_about">About Us</a><a href="products.html" data-i18n="nav_products">Products</a><a href="blog.html">Blog</a><a href="case-study.html" data-i18n="nav_cases">Case Studies</a><a href="faq.html" data-i18n="nav_faq">FAQ</a><a href="contact.html" class="nav-cta" data-i18n="nav_contact">Contact</a></nav><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></div><div class="mobile-nav" id="mobile-nav"><a href="index.html" data-i18n="nav_home">Home</a><a href="about.html" data-i18n="nav_about">About Us</a><a href="products.html" data-i18n="nav_products">Products</a><a href="blog.html">Blog</a><a href="case-study.html" data-i18n="nav_cases">Case Studies</a><a href="faq.html" data-i18n="nav_faq">FAQ</a><a href="contact.html" data-i18n="nav_contact">Contact</a></div></header>
 
-<!-- 4. REPLACE page-hero paragraph -->
-Guangdong Shihao Intelligent Technology Co., Ltd. — the vertically integrated <strong>electric food-waste composter factory</strong> behind tier-one appliance brands across Korea, Japan, North America, Europe, and Southeast Asia. Established 2020 · Foshan, Guangdong, China.
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Who We Are</span>
+    <h1 class="h1 text-white">Global Leader in <br>Food Waste Disposer Manufacturing</h1>
+  </div>
+</section>
 
-<!-- 5. REPLACE About content intro paragraphs (first 3 paragraphs of about-content) -->
-<p>Founded in August 2020 as Zhongshan Shihao Electrical Appliance Co., Ltd., Shihao entered the <strong>electric kitchen composter</strong> category in 2022 — identifying it as a high-growth segment with no dominant vertically integrated OEM supplier. We restructured in May 2024 as Guangdong Shihao Intelligent Technology Co., Ltd., reflecting our investment in intelligent sensing technology, automated assembly, and multi-market certification programs.</p>
+<!-- Company intro -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <span class="eyebrow">10+ Years of Excellence</span>
+        <h2 class="h2" style="color:var(--navy);">Shihao Intelligent Technology</h2>
+        <div class="divider" style="margin:16px 0;"></div>
+        <p>Founded in Shunde, Guangdong – the home of China's small appliance industry – Shihao Intelligent specializes in R&D, manufacturing, and global export of electric food waste disposers. We serve 20+ countries with 25+ certified models and full OEM/ODM capabilities.</p>
+        <p>Our 8,000m² facility houses advanced assembly lines, a dedicated engineering team, and in-house testing labs. From compact 2L units to industrial-grade 5.5L models, every product is built to meet regional standards (PSE, ETL, CE, KC, UL, etc.).</p>
+        <p>We believe in long-term partnerships – offering flexible MOQ, private labeling, and custom mold development. Your brand, our engineering.</p>
+      </div>
+      <div>
+        <img src="images/factory-overview.jpg" alt="Factory overview" style="width:100%; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>Today Shihao is a specialist <strong>electric food-waste composter manufacturer</strong> exclusively focused on this product vertical. We do not make humidifiers, fans, or other appliances as a core business. Every engineering investment, every certification, every mold and motor — is built around one product category: <strong>household electric food-waste composters</strong>, from 2L compact models to 5.5L flagships.</p>
+<!-- Factory & Certifications Gallery -->
+<section class="section section-bg">
+  <div class="container">
+    <span class="eyebrow">Our Facility</span>
+    <h2 class="h2" style="color:var(--navy);">Precision Manufacturing</h2>
+    <div class="divider"></div>
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:32px;">
+      <div><img src="images/factory-assembly.jpg" alt="Assembly line" style="width:100%; border-radius:12px;"></div>
+      <div><img src="images/cert-wall.jpg" alt="Certifications wall" style="width:100%; border-radius:12px;"></div>
+    </div>
+    <p style="margin-top:24px; text-align:center; font-size:14px; color:var(--muted);">Our assembly line & full certification wall (PSE, ETL, CE, CB, KC, ERP, ISO9001, TÜV, UL)</p>
+  </div>
+</section>
 
-<p>Our products reach consumers across Korea, Japan, Taiwan, North America, Europe, and Southeast Asia through 40+ OEM/ODM brand partners — serving platform sellers, premium appliance brands, retail chains, and sustainable-living distributors who require a <strong>certified electric kitchen composter factory</strong> they can trust at scale.</p>
+<!-- Certification by market -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Global Compliance</span>
+    <h2 class="h2" style="color:var(--navy);">Certification by Target Market</h2>
+    <div class="divider"></div>
+    <div class="grid-3" style="margin-top:36px;">
+      <div class="card"><div style="font-size:24px;">🇰🇷</div><h4>Korea</h4><p>KC certified, 220V 60Hz. 20+ models available including SHL-23/24/25 series.</p></div>
+      <div class="card"><div style="font-size:24px;">🇯🇵</div><h4>Japan</h4><p>PSE mark, 100V 50/60Hz. Models: SHL-25B, JH25A, SHL-23D.</p></div>
+      <div class="card"><div style="font-size:24px;">🇺🇸</div><h4>North America</h4><p>ETL / UL listed, 110–120V 60Hz. SHL-23 series, SHL-25A/B.</p></div>
+      <div class="card"><div style="font-size:24px;">🇪🇺</div><h4>Europe</h4><p>CE + ERP, 220–240V 50Hz. Contact for EU-ready SKUs.</p></div>
+      <div class="card"><div style="font-size:24px;">🇹🇼</div><h4>Taiwan</h4><p>BSMI / CNS, 110V 60Hz. SHL-25C/E, JH25A.</p></div>
+      <div class="card"><div style="font-size:24px;">🌏</div><h4>SE Asia</h4><p>Dual-voltage (100–230V) models available. Ideal for mixed voltage regions.</p></div>
+    </div>
+  </div>
+</section>
 
-<!-- 6. ADD new section after timeline — insert before certification grid -->
-<div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin:32px 0;">
-  <h3 style="font-family:var(--font-d);font-size:20px;font-weight:700;color:var(--navy);margin-bottom:16px;">Why Shihao Is the <em>Specialist</em> Electric Kitchen Composter Manufacturer</h3>
-  <p style="font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:12px;">Most OEM appliance factories manufacture dozens of unrelated product categories. Shihao manufactures <strong>electric food-waste composters</strong> — and only electric food-waste composters — as its core product. This vertical specialisation means our engineering team's accumulated knowledge, our testing laboratory's calibration, our motor factory's BLDC optimisation, and our mold shop's tooling experience are all concentrated in one product domain.</p>
-  <p style="font-size:14px;color:var(--muted);line-height:1.75;">The result: 96% food waste reduction rate, ≤35 dB flagship noise (the quietest in the category), stainless steel nano-ceramic inner buckets across all SKUs, and pre-built certifications covering five major markets — delivered from a 200-unit MOQ with 30-day sample lead time.</p>
-</div>
+<!-- CTA -->
+<section class="section" style="background:var(--navy); color:white;">
+  <div class="container" style="text-align:center;">
+    <h2 style="font-family:var(--font-d);font-size:28px;">Partner with a Trusted Manufacturer</h2>
+    <p style="max-width:500px; margin:16px auto;">Request your OEM/ODM quote or schedule a factory tour.</p>
+    <a href="contact.html" class="btn btn-primary" style="background:var(--blue);">Contact Us →</a>
+  </div>
+</section>
 
-<!-- 7. UPDATE facilities section intro paragraph -->
-Every core component of a Shihao <strong>electric food-waste composter</strong> — the 24V BLDC motor, the stainless steel nano-ceramic bucket, the circuit board, the plastic housing — is designed and manufactured in-house at our 18,000+ sqm Foshan facility. This eliminates the supply chain risks that affect assembler-type OEM factories and gives tier-one brand partners the traceability and quality control they require.
+<footer><div class="container"><div class="footer-grid"><div class="footer-col"><div class="logo" style="margin-bottom:16px;"><div class="logo-hex"><span>SH</span></div><div class="logo-text"><strong>SHIHAO</strong><small>Intelligent Technology</small></div></div><p>Guangdong Shihao Intelligent Technology Co., Ltd.<br>Huahui Rd #1, Ronggui, Shunde District<br>Foshan City, Guangdong, China</p><div class="social-row" style="margin-top:16px;"><a href="https://www.linkedin.com/company/bestar-tek/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://www.facebook.com/profile.php?id=61588629492017" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.tiktok.com/@jocelyn_smartdeviceoem" target="_blank" rel="noopener" class="social-link" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a></div></div><div class="footer-col"><h4>Products</h4><ul class="footer-links"><li><a href="products.html">2L Series</a></li><li><a href="products.html">3L Series</a></li><li><a href="products.html">3.8L / 4.8L Series</a></li><li><a href="products.html">4L Series</a></li><li><a href="products.html">5.5L Series</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="about.html#certifications">Certifications</a></li><li><a href="case-study.html">Case Studies</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-col"><h4>Partner</h4><ul class="footer-links"><li><a href="contact.html">OEM Inquiry</a></li><li><a href="contact.html">ODM Services</a></li><li><a href="contact.html">Request Sample</a></li></ul></div></div><div class="footer-bottom"><p data-i18n="footer_copy">© 2026 Guangdong Shihao Intelligent Technology Co., Ltd. All rights reserved.</p></div></div></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
