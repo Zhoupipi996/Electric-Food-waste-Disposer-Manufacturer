@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<!-- ===== SEO 优化部分（替换标题和描述） ===== -->
+<!-- ===== SEO 优化部分 ===== -->
 <title>Contact Shihao – Electric Kitchen Composter Manufacturer OEM/ODM Inquiry | Foshan China</title>
 <meta name="description" content="Contact Shihao Intelligent Technology — specialist electric kitchen composter manufacturer and electric food-waste composter factory in Foshan, China. OEM/ODM inquiries: marketing@foodcycler-manufacturer.top | +86-13476144359. B2B response within 1 business day. Sample lead time 30 days.">
 
-<!-- ===== 新增 JSON-LD 结构化数据 ===== -->
+<!-- ===== JSON-LD ===== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,7 +35,6 @@
 <section class="page-hero">
   <div class="container">
     <span class="eyebrow">Get in Touch</span>
-    <!-- 替换 H1 和描述 -->
     <h1 class="h1 text-white">Contact Shihao — Electric Kitchen Composter<br>Manufacturer &amp; OEM/ODM Factory</h1>
     <p>Submit a B2B inquiry to Shihao Intelligent Technology — specialist <strong>electric food-waste composter manufacturer</strong> in Foshan, China. We respond to all qualified inquiries within 1 business day. Sample lead time: 30 days on existing tooling.</p>
   </div>
@@ -76,9 +75,7 @@
       <!-- Right: Inquiry Form -->
       <div style="background:var(--bg); padding:32px; border-radius:var(--r);">
         <div id="form-container">
-          <!-- 替换表单标题 -->
           <h3 style="font-family:var(--font-d);font-size:22px;color:var(--navy); margin-bottom:16px;">B2B OEM/ODM Inquiry — Electric Kitchen Composter</h3>
-          <!-- 替换表单描述 -->
           <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Tell us your target market, preferred capacity series (2L–5.5L), and estimated volume. Our electric food-waste composter specialists will respond with model recommendations, certification confirmation, and sample pricing within 1 business day.</p>
           <form id="inquiry-form">
             <div style="margin-bottom:16px;">
@@ -125,7 +122,7 @@
           </form>
           <p style="font-size:12px; color:var(--muted); margin-top:16px;">We'll reply within 24 hours. For sample orders, please specify quantity and target market.</p>
         </div>
-        <!-- Success message (initially hidden) -->
+        <!-- Success message -->
         <div id="success-message" style="display:none; text-align:center; padding:30px 20px;">
           <div style="font-size:48px; margin-bottom:16px;">✅</div>
           <h3 style="font-family:var(--font-d);font-size:22px;color:var(--navy);margin-bottom:8px;">Thank You!</h3>
@@ -133,7 +130,7 @@
           <a href="/" class="btn btn-primary">Return to Home</a>
         </div>
 
-        <!-- ===== 新增 SEO 关键词区块 ===== -->
+        <!-- SEO block -->
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin-top:32px;">
           <h3 style="font-family:var(--font-d);font-size:18px;font-weight:700;color:var(--navy);margin-bottom:12px;">Why B2B Buyers Choose Shihao as Their Electric Kitchen Composter Manufacturer</h3>
           <ul style="list-style:none;font-size:14px;color:var(--muted);line-height:1.8;">
@@ -170,12 +167,12 @@ document.getElementById('inquiry-form').addEventListener('submit', function(e) {
         method: 'POST',
         mode: 'no-cors',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'text/plain'  // 改为 text/plain
         },
         body: JSON.stringify(data)
     })
     .then(() => {
-        // 因为 no-cors 模式无法读取响应，只要不报错就认为成功
+        // 不管成功与否，都显示感谢消息（因为 no-cors 无法读取响应）
         document.getElementById('form-container').style.display = 'none';
         document.getElementById('success-message').style.display = 'block';
     })
