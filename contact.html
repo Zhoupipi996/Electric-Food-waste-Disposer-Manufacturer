@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<!-- ===== SEO 优化部分 ===== -->
 <title>Contact Shihao – Electric Kitchen Composter Manufacturer OEM/ODM Inquiry | Foshan China</title>
 <meta name="description" content="Contact Shihao Intelligent Technology — specialist electric kitchen composter manufacturer and electric food-waste composter factory in Foshan, China. OEM/ODM inquiries: marketing@foodcycler-manufacturer.top | +86-13476144359. B2B response within 1 business day. Sample lead time 30 days.">
 
-<!-- ===== JSON-LD ===== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,7 +41,7 @@
 <section class="section">
   <div class="container">
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px;">
-      <!-- Left: Contact Info & Lead Times -->
+      <!-- Left -->
       <div>
         <div style="margin-bottom:32px;">
           <h3 style="font-family:var(--font-d);font-size:20px;color:var(--navy);">Factory Address</h3>
@@ -80,11 +78,11 @@
           <form id="inquiry-form">
             <div style="margin-bottom:16px;">
               <label style="display:block; font-weight:600; margin-bottom:6px;">Your Name *</label>
-              <input type="text" name="Name" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+              <input type="text" name="Your Name" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
             </div>
             <div style="margin-bottom:16px;">
-              <label style="display:block; font-weight:600; margin-bottom:6px;">Company Name</label>
-              <input type="text" name="Company" style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
+              <label style="display:block; font-weight:600; margin-bottom:6px;">Company Name *</label>
+              <input type="text" name="Company Name" required style="width:100%; padding:10px; border:1px solid var(--border); border-radius:4px;">
             </div>
             <div style="margin-bottom:16px;">
               <label style="display:block; font-weight:600; margin-bottom:6px;">Email *</label>
@@ -109,9 +107,9 @@
                 <option>2L Series</option>
                 <option>2.8L Series</option>
                 <option>3L Series</option>
-                <option>3.8L / 4.8L Series</option>
+                <option>3.8/4.8L Series</option>
                 <option>4L Series</option>
-                <option>5.5L Flagship</option>
+                <option>5.5L Series</option>
               </select>
             </div>
             <div style="margin-bottom:16px;">
@@ -154,25 +152,30 @@ document.getElementById('inquiry-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const form = e.target;
-    const data = {};
-    const fields = form.querySelectorAll('input, select, textarea');
-    fields.forEach(field => {
-        if (field.name) {
-            data[field.name] = field.value;
-        }
-    });
+    const formData = new FormData(form);
+    const fields = {};
+    for (let [key, value] of formData.entries()) {
+        fields[key] = value;
+    }
+
+    // 根据官方文档，必须包含 tab 和 fields
+    const payload = {
+        tab: "contact",   // 指定要写入的表单
+        fields: fields
+    };
 
     const url = 'https://script.google.com/macros/s/AKfycbzzmh1_pEvB-onGyBug8po-37Ge1pPwVWgcDJktOw-EXmGTnzgReCXZ4XYKejN1cEnc4g/exec';
+
     fetch(url, {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'no-cors',  // 避免 CORS 预检
         headers: {
-            'Content-Type': 'text/plain'  // 改为 text/plain
+            'Content-Type': 'text/plain'  // 必须为 text/plain
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(payload)
     })
     .then(() => {
-        // 不管成功与否，都显示感谢消息（因为 no-cors 无法读取响应）
+        // no-cors 无法读取响应，但请求已发出
         document.getElementById('form-container').style.display = 'none';
         document.getElementById('success-message').style.display = 'block';
     })
