@@ -9,7 +9,6 @@ if (hamburger && mobileNav) {
   hamburger.addEventListener('click', () => {
     mobileNav.classList.toggle('open');
   });
-  // Close on link click
   mobileNav.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => mobileNav.classList.remove('open'));
   });
@@ -154,7 +153,7 @@ if (langSelect) {
   langSelect.addEventListener('change', () => applyLang(langSelect.value));
 }
 
-// ── GOOGLE CSE SEARCH BOX — FORCE COMPACT SIZE ──
+// ── GOOGLE CSE SEARCH BOX — 调整尺寸 ──
 (function() {
     var checkExist = setInterval(function() {
         var input = document.querySelector('.gsc-input');
@@ -163,42 +162,43 @@ if (langSelect) {
         var searchBox = document.querySelector('.gsc-search-box');
 
         if (input && inputBox && button) {
-            input.style.width = '40px';
-            input.style.height = '16px';
-            input.style.fontSize = '8px';
-            input.style.padding = '0 2px';
+            // 输入框
+            input.style.width = '80px';
+            input.style.height = '22px';
+            input.style.fontSize = '11px';
+            input.style.padding = '0 6px';
             input.style.minWidth = '0';
-            input.style.maxWidth = '50px';
+            input.style.maxWidth = '100px';
             input.style.border = 'none';
             input.style.outline = 'none';
             input.style.background = 'transparent';
             input.style.color = 'white';
-            input.style.lineHeight = '16px';
+            input.style.lineHeight = '22px';
 
-            inputBox.style.height = '18px';
-            inputBox.style.minHeight = '18px';
-            inputBox.style.maxHeight = '18px';
-            inputBox.style.padding = '0 2px';
+            // 输入框容器
+            inputBox.style.height = '26px';
+            inputBox.style.minHeight = '26px';
+            inputBox.style.maxHeight = '26px';
+            inputBox.style.padding = '0 4px';
             inputBox.style.background = 'rgba(255,255,255,0.08)';
             inputBox.style.border = '1px solid rgba(255,255,255,0.12)';
-            inputBox.style.borderRadius = '2px';
+            inputBox.style.borderRadius = '3px';
             inputBox.style.borderRight = 'none';
             inputBox.style.borderTopRightRadius = '0';
             inputBox.style.borderBottomRightRadius = '0';
             inputBox.style.display = 'flex';
             inputBox.style.alignItems = 'center';
 
-            button.style.width = '18px';
-            button.style.height = '18px';
+            // 搜索按钮
+            button.style.width = '28px';
+            button.style.height = '26px';
             button.style.padding = '0';
-            button.style.minWidth = '18px';
-            button.style.maxWidth = '18px';
-            button.style.minHeight = '18px';
-            button.style.maxHeight = '18px';
+            button.style.minWidth = '28px';
+            button.style.minHeight = '26px';
             button.style.background = '#2a7de1';
             button.style.border = '1px solid rgba(255,255,255,0.12)';
             button.style.borderLeft = 'none';
-            button.style.borderRadius = '2px';
+            button.style.borderRadius = '3px';
             button.style.borderTopLeftRadius = '0';
             button.style.borderBottomLeftRadius = '0';
             button.style.cursor = 'pointer';
@@ -206,28 +206,33 @@ if (langSelect) {
             button.style.alignItems = 'center';
             button.style.justifyContent = 'center';
 
+            // 搜索框整体容器
             if (searchBox) {
                 searchBox.style.display = 'flex';
                 searchBox.style.alignItems = 'center';
-                searchBox.style.height = '18px';
+                searchBox.style.height = '26px';
                 searchBox.style.margin = '0';
                 searchBox.style.padding = '0';
                 searchBox.style.gap = '0';
             }
 
+            // 父级容器
             var gcseDiv = document.querySelector('.gcse-search');
             if (gcseDiv) {
                 gcseDiv.style.display = 'inline-flex';
                 gcseDiv.style.alignItems = 'center';
                 gcseDiv.style.margin = '0';
                 gcseDiv.style.padding = '0';
-                gcseDiv.style.maxWidth = '70px';
+                gcseDiv.style.maxWidth = '130px';
             }
 
+            // SVG 放大镜图标
             var svg = button.querySelector('svg');
             if (svg) {
-                svg.style.width = '10px';
-                svg.style.height = '10px';
+                svg.style.width = '14px';
+                svg.style.height = '14px';
+                svg.style.display = 'block';
+                svg.style.fill = 'white';
             }
 
             clearInterval(checkExist);
