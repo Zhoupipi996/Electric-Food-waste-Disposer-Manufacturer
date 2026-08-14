@@ -43,7 +43,7 @@
   <!-- ── BLOG HUB ── -->
   <url>
     <loc>https://www.foodcycler-manufacturer.top/blog.html</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -117,7 +117,7 @@
     <priority>0.78</priority>
   </url>
 
-  <!-- ── BLOG: NEW — B2B SOURCING & COMPLIANCE GUIDES (added per B2B FAQ / buyer-query expansion) ── -->
+  <!-- ── BLOG: B2B SOURCING & COMPLIANCE GUIDES ── -->
   <url>
     <loc>https://www.foodcycler-manufacturer.top/blog/multi-market-certification-checklist.html</loc>
     <lastmod>2026-03-12</lastmod>
@@ -141,6 +141,26 @@
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- ── BLOG: NEW — CONSUMER EDUCATION & SUSTAINABILITY (Electric Food Garbage Disposer / Electric Kitchen Composter keyword focus) ── -->
+  <url>
+    <loc>https://www.foodcycler-manufacturer.top/blog/pre-compost-guide-electric-food-garbage-disposer.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.foodcycler-manufacturer.top/blog/electric-food-garbage-disposer-vs-traditional-disposer.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.foodcycler-manufacturer.top/blog/environmental-impact-energy-efficient-design.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 
 </urlset>
