@@ -198,15 +198,13 @@ footer{background:#07131f;padding:60px 0 28px}
   .section-sm{padding:40px 0}
   .h1{font-size:38px}
 }
-
-/* ===== 导航栏搜索框样式 — 极端紧凑版 ===== */
+/* ===== 导航栏搜索框样式 — 极致压缩版 ===== */
 nav .gcse-search {
     display: inline-flex !important;
     align-items: center !important;
-    margin-left: 6px !important;
+    margin-left: 4px !important;
     vertical-align: middle !important;
-    max-width: 130px !important;
-    width: auto !important;
+    max-width: 100px !important;
 }
 
 nav .gcse-search * {
@@ -229,47 +227,47 @@ nav .gcse-search td {
 }
 
 nav .gcse-search .gsc-input-box {
-    height: 26px !important;
-    padding: 0 4px !important;
+    height: 22px !important;
+    padding: 0 3px !important;
     background: rgba(255,255,255,0.08) !important;
-    border: 1px solid rgba(255,255,255,0.15) !important;
-    border-radius: 3px !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+    border-radius: 2px !important;
     border-right: none !important;
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
     display: flex !important;
     align-items: center !important;
-    min-height: 26px !important;
+    min-height: 22px !important;
 }
 
 nav .gcse-search .gsc-input {
-    width: 70px !important;
-    height: 24px !important;
-    padding: 0 4px !important;
-    font-size: 10px !important;
+    width: 50px !important;
+    height: 20px !important;
+    padding: 0 3px !important;
+    font-size: 9px !important;
     color: white !important;
     background: transparent !important;
     border: none !important;
     outline: none !important;
     min-width: 0 !important;
-    line-height: 24px !important;
+    line-height: 20px !important;
     margin: 0 !important;
 }
 
 nav .gcse-search .gsc-input::placeholder {
-    color: rgba(255,255,255,0.4) !important;
-    font-size: 9px !important;
+    color: rgba(255,255,255,0.3) !important;
+    font-size: 8px !important;
 }
 
 nav .gcse-search .gsc-search-button {
-    width: 26px !important;
-    height: 26px !important;
+    width: 22px !important;
+    height: 22px !important;
     padding: 0 !important;
     margin: 0 !important;
     background: #2a7de1 !important;
-    border: 1px solid rgba(255,255,255,0.15) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
     border-left: none !important;
-    border-radius: 3px !important;
+    border-radius: 2px !important;
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
     cursor: pointer !important;
@@ -284,8 +282,8 @@ nav .gcse-search .gsc-search-button:hover {
 }
 
 nav .gcse-search .gsc-search-button svg {
-    width: 12px !important;
-    height: 12px !important;
+    width: 10px !important;
+    height: 10px !important;
     fill: white !important;
 }
 
