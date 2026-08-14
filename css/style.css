@@ -198,35 +198,65 @@ footer{background:#07131f;padding:60px 0 28px}
   .section-sm{padding:40px 0}
   .h1{font-size:38px}
 }
-/* ===== 导航栏搜索框样式 — 极致压缩版 ===== */
-nav .gcse-search {
+/* ===== 导航栏搜索框样式 — 终极强制版 ===== */
+nav .gcse-search,
+header .gcse-search,
+.header-inner .gcse-search {
     display: inline-flex !important;
     align-items: center !important;
     margin-left: 4px !important;
     vertical-align: middle !important;
-    max-width: 100px !important;
+    max-width: 90px !important;
+    width: auto !important;
 }
 
-nav .gcse-search * {
+nav .gcse-search *,
+header .gcse-search *,
+.header-inner .gcse-search * {
     box-sizing: border-box !important;
+    max-height: 24px !important;
 }
 
-nav .gcse-search form,
 nav .gcse-search .gsc-search-box,
-nav .gcse-search table,
-nav .gcse-search tbody,
-nav .gcse-search tr,
-nav .gcse-search td {
+header .gcse-search .gsc-search-box,
+.header-inner .gcse-search .gsc-search-box,
+nav .gcse-search form,
+header .gcse-search form,
+.header-inner .gcse-search form {
     margin: 0 !important;
     padding: 0 !important;
     background: transparent !important;
     border: none !important;
     display: flex !important;
     align-items: center !important;
-    height: auto !important;
+    height: 24px !important;
 }
 
-nav .gcse-search .gsc-input-box {
+nav .gcse-search table,
+header .gcse-search table,
+.header-inner .gcse-search table,
+nav .gcse-search tbody,
+header .gcse-search tbody,
+.header-inner .gcse-search tbody,
+nav .gcse-search tr,
+header .gcse-search tr,
+.header-inner .gcse-search tr,
+nav .gcse-search td,
+header .gcse-search td,
+.header-inner .gcse-search td {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 24px !important;
+    width: auto !important;
+}
+
+nav .gcse-search .gsc-input-box,
+header .gcse-search .gsc-input-box,
+.header-inner .gcse-search .gsc-input-box {
     height: 22px !important;
     padding: 0 3px !important;
     background: rgba(255,255,255,0.08) !important;
@@ -238,9 +268,12 @@ nav .gcse-search .gsc-input-box {
     display: flex !important;
     align-items: center !important;
     min-height: 22px !important;
+    width: auto !important;
 }
 
-nav .gcse-search .gsc-input {
+nav .gcse-search .gsc-input,
+header .gcse-search .gsc-input,
+.header-inner .gcse-search .gsc-input {
     width: 50px !important;
     height: 20px !important;
     padding: 0 3px !important;
@@ -252,14 +285,19 @@ nav .gcse-search .gsc-input {
     min-width: 0 !important;
     line-height: 20px !important;
     margin: 0 !important;
+    box-shadow: none !important;
 }
 
-nav .gcse-search .gsc-input::placeholder {
+nav .gcse-search .gsc-input::placeholder,
+header .gcse-search .gsc-input::placeholder,
+.header-inner .gcse-search .gsc-input::placeholder {
     color: rgba(255,255,255,0.3) !important;
     font-size: 8px !important;
 }
 
-nav .gcse-search .gsc-search-button {
+nav .gcse-search .gsc-search-button,
+header .gcse-search .gsc-search-button,
+.header-inner .gcse-search .gsc-search-button {
     width: 22px !important;
     height: 22px !important;
     padding: 0 !important;
@@ -277,37 +315,55 @@ nav .gcse-search .gsc-search-button {
     flex-shrink: 0 !important;
 }
 
-nav .gcse-search .gsc-search-button:hover {
+nav .gcse-search .gsc-search-button:hover,
+header .gcse-search .gsc-search-button:hover,
+.header-inner .gcse-search .gsc-search-button:hover {
     background: #4b96f5 !important;
 }
 
-nav .gcse-search .gsc-search-button svg {
+nav .gcse-search .gsc-search-button svg,
+header .gcse-search .gsc-search-button svg,
+.header-inner .gcse-search .gsc-search-button svg {
     width: 10px !important;
     height: 10px !important;
     fill: white !important;
 }
 
-nav .gcse-search .gsc-clear-button {
+nav .gcse-search .gsc-clear-button,
+header .gcse-search .gsc-clear-button,
+.header-inner .gcse-search .gsc-clear-button {
     display: none !important;
 }
 
-/* 隐藏所有 Google 多余元素 */
+/* 隐藏 Google 所有多余元素 */
 nav .gcse-search .gsc-branding,
+header .gcse-search .gsc-branding,
+.header-inner .gcse-search .gsc-branding,
 nav .gcse-search .gsc-ad,
+header .gcse-search .gsc-ad,
+.header-inner .gcse-search .gsc-ad,
 nav .gcse-search .gsc-thin,
+header .gcse-search .gsc-thin,
+.header-inner .gcse-search .gsc-thin,
 nav .gcse-search .gsc-tabs,
+header .gcse-search .gsc-tabs,
+.header-inner .gcse-search .gsc-tabs,
 nav .gcse-search .gsc-result-info,
-nav .gcse-search .gsc-above-wrapper-area,
-nav .gcse-search .gsc-webResult,
-nav .gcse-search .gsc-resultsRoot,
+header .gcse-search .gsc-result-info,
+.header-inner .gcse-search .gsc-result-info,
 nav .gcse-search .gsc-control-cse,
+header .gcse-search .gsc-control-cse,
+.header-inner .gcse-search .gsc-control-cse,
 nav .gcse-search .gsc-control-wrapper-cse,
-nav .gcse-search .gsc-control {
+header .gcse-search .gsc-control-wrapper-cse,
+.header-inner .gcse-search .gsc-control-wrapper-cse {
     display: none !important;
 }
 
 @media (max-width: 768px) {
-    nav .gcse-search {
+    nav .gcse-search,
+    header .gcse-search,
+    .header-inner .gcse-search {
         display: none !important;
     }
 }
