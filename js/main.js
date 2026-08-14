@@ -153,3 +153,84 @@ if (langSelect) {
   applyLang(saved);
   langSelect.addEventListener('change', () => applyLang(langSelect.value));
 }
+
+// ── GOOGLE CSE SEARCH BOX — FORCE COMPACT SIZE ──
+(function() {
+    var checkExist = setInterval(function() {
+        var input = document.querySelector('.gsc-input');
+        var inputBox = document.querySelector('.gsc-input-box');
+        var button = document.querySelector('.gsc-search-button');
+        var searchBox = document.querySelector('.gsc-search-box');
+
+        if (input && inputBox && button) {
+            input.style.width = '40px';
+            input.style.height = '16px';
+            input.style.fontSize = '8px';
+            input.style.padding = '0 2px';
+            input.style.minWidth = '0';
+            input.style.maxWidth = '50px';
+            input.style.border = 'none';
+            input.style.outline = 'none';
+            input.style.background = 'transparent';
+            input.style.color = 'white';
+            input.style.lineHeight = '16px';
+
+            inputBox.style.height = '18px';
+            inputBox.style.minHeight = '18px';
+            inputBox.style.maxHeight = '18px';
+            inputBox.style.padding = '0 2px';
+            inputBox.style.background = 'rgba(255,255,255,0.08)';
+            inputBox.style.border = '1px solid rgba(255,255,255,0.12)';
+            inputBox.style.borderRadius = '2px';
+            inputBox.style.borderRight = 'none';
+            inputBox.style.borderTopRightRadius = '0';
+            inputBox.style.borderBottomRightRadius = '0';
+            inputBox.style.display = 'flex';
+            inputBox.style.alignItems = 'center';
+
+            button.style.width = '18px';
+            button.style.height = '18px';
+            button.style.padding = '0';
+            button.style.minWidth = '18px';
+            button.style.maxWidth = '18px';
+            button.style.minHeight = '18px';
+            button.style.maxHeight = '18px';
+            button.style.background = '#2a7de1';
+            button.style.border = '1px solid rgba(255,255,255,0.12)';
+            button.style.borderLeft = 'none';
+            button.style.borderRadius = '2px';
+            button.style.borderTopLeftRadius = '0';
+            button.style.borderBottomLeftRadius = '0';
+            button.style.cursor = 'pointer';
+            button.style.display = 'flex';
+            button.style.alignItems = 'center';
+            button.style.justifyContent = 'center';
+
+            if (searchBox) {
+                searchBox.style.display = 'flex';
+                searchBox.style.alignItems = 'center';
+                searchBox.style.height = '18px';
+                searchBox.style.margin = '0';
+                searchBox.style.padding = '0';
+                searchBox.style.gap = '0';
+            }
+
+            var gcseDiv = document.querySelector('.gcse-search');
+            if (gcseDiv) {
+                gcseDiv.style.display = 'inline-flex';
+                gcseDiv.style.alignItems = 'center';
+                gcseDiv.style.margin = '0';
+                gcseDiv.style.padding = '0';
+                gcseDiv.style.maxWidth = '70px';
+            }
+
+            var svg = button.querySelector('svg');
+            if (svg) {
+                svg.style.width = '10px';
+                svg.style.height = '10px';
+            }
+
+            clearInterval(checkExist);
+        }
+    }, 100);
+})();
